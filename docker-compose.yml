@@ -26,6 +26,14 @@ services:
       - MOODLE_HOST=zenya.site
       # ALLOW_EMPTY_PASSWORD is recommended only for development.
       - ALLOW_EMPTY_PASSWORD=yes
+      - MOODLE_SMTP_HOST=smtp.hostinger.com
+      - MOODLE_SMTP_PORT=587
+      - MOODLE_SMTP_USER=moodle@zenya.mx
+      - MOODLE_SMTP_PASSWORD=Zenya_2022@
+      - MOODLE_SMTP_PROTOCOL=tls
+      - PHP_POST_MAX_SIZE=600M
+      - PHP_UPLOAD_MAX_FILESIZE=600M
+      - PHP_MAX_EXECUTION_TIME=600
     volumes:
       - 'moodle_data:/bitnami/moodle'
       - 'moodledata_data:/bitnami/moodledata'
